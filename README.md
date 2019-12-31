@@ -1,2 +1,6 @@
 # raspi_led_morse
-device driver for led morse code
+
+1. About  
+受け取った半角英数字をモールス信号に変換し，その信号に従ってLEDを光らせるキャラクタデバイスです．
+対応している文字は，小文字のa~zと数字の0~9です．
+モールス符号は morse_code.h に定義されています．
