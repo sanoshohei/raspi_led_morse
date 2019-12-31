@@ -1,2 +1,2 @@
 # raspi_led_morse
-device driver that morse code with led
+device driver for led morse code
