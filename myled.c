@@ -9,7 +9,7 @@
 #include "morse_code.h"
 
 MODULE_AUTHOR("Shohei Sano");
-MODULE_DESCRIPTION("driver for LED control");
+MODULE_DESCRIPTION("driver for LED morse code control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.1");
 
@@ -37,7 +37,8 @@ static ssize_t led_write(struct file* filp, const char* buf,
 			gpio_base[7] = 1 << 25;
 			mdelay(100);
 			gpio_base[10] = 1 << 25;
-		}else if (morse[i] == MORSE_DASH){
+		}
+		else if (morse[i] == MORSE_DASH){
 			gpio_base[7] = 1 << 25;
 			mdelay(300);
 			gpio_base[10] = 1 << 25;
@@ -47,16 +48,6 @@ static ssize_t led_write(struct file* filp, const char* buf,
 	}
 
 	mdelay(200);
-
-	/*
-	if (c == '0')
-		gpio_base[10] = 1 << 25;
-	else if (c == '1'){
-		gpio_base[7] = 1 << 25;
-		mdelay(1000);
-		gpio_base[10] = 1 << 25;
-	}
-	*/	
 
 	printk(KERN_INFO "receive %c\n", c);
 	return 1;
