@@ -9,6 +9,7 @@ Raspbianでの動作を確認しています．
 1. 文字をデバイスファイルに入力する
 
 ### デモ
+https://www.youtube.com/watch?v=Rd8gATbJWqQ
 
 ### ライセンス
 GPL3.0
